@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var ctx1 = document.getElementById("palmOilChart").getContext("2d");
 
   // Data manual untuk jam
-  var dailyHours = [0, 2, 2, 2, 2, 2, 4, 6, 9];
+  var dailyHours = [0, 2, 2, 2, 2, 2, 4, 6, 9, 8];
 
   // Hitung total jam
   var totalHours = dailyHours.reduce((acc, val) => acc + val, 0);
