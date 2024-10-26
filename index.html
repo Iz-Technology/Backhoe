@@ -1,115 +1,113 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
 
-    <title>Login</title>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
 
-    <link rel="stylesheet" href="style.css" />
+  <title>Login</title>
 
-    <link rel="stylesheet" href="script.js" />
+  <link rel="stylesheet" href="style.css" />
 
-    <!-- Custom fonts for this template-->
-    <link
-      href="vendor/fontawesome-free/css/all.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-      rel="stylesheet"
-    />
+  <link rel="stylesheet" href="script.js" />
 
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet" />
 
-    <script>
-      function validateForm() {
-        var password = document.getElementById("exampleInputPassword").value;
-        if (password === "") {
-          alert("Silakan masukkan kata sandi Anda.");
-          return false;
-        } else if (password !== "admin123") {
-          alert("Kata sandi salah. Silakan coba lagi.");
-          return false;
-        } else {
-          window.location.href = "profile.html";
-          return false;
-        }
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+
+  <script>
+    function validateForm() {
+      var password = document.getElementById("exampleInputPassword").value;
+      if (password === "") {
+        alert("Silakan masukkan kata sandi Anda.");
+        return false;
+      } else if (password !== "admin123") {
+        alert("Kata sandi salah. Silakan coba lagi.");
+        return false;
+      } else {
+        window.location.href = "profile.html";
+        return false;
       }
-    </script>
-  </head>
+    }
+  </script>
 
-  <body class="bg-gradient-primary">
-    <div class="container">
-      <!-- Baris Luar -->
-      <div class="row justify-content-center">
-        <div class="login1">
-          <h4 class="login1-name">Welcome To My Page </h4>
-          <img src="img/1.jpg" alt="iz" class="login1-img">
-          <div class="col-lg md-3">
-            <div class="card-body p-0">
-              <!-- Baris Bersarang dalam Tubuh Kartu -->
-              <div class="row">
-                <!-- <div class="col-lg">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M2QV31EE14"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-M2QV31EE14');
+  </script>
+
+</head>
+
+<body class="bg-gradient-primary">
+  <div class="container">
+    <!-- Baris Luar -->
+    <div class="row justify-content-center">
+      <div class="login1">
+        <h4 class="login1-name">Welcome To My Page </h4>
+        <img src="img/1.jpg" alt="iz" class="login1-img">
+        <div class="col-lg md-3">
+          <div class="card-body p-0">
+            <!-- Baris Bersarang dalam Tubuh Kartu -->
+            <div class="row">
+              <!-- <div class="col-lg">
                     <div class="p-5">
                       <div class="text-center"> -->
-              </div>
-              <form class="user" onsubmit="return validateForm()">
-                        <div class="form-group">
-                          <input
-                            type="password"
-                            class="form-control form-control-user"
-                            id="exampleInputPassword"
-                            placeholder="Enter Password - - -"
-                          />
-                        </div>
-                        <button
-                          type="submit"
-                          class="btn btn-primary btn-user btn-block"
-                        >
-                          Login
-                        </button>
-
-                      </form>
-                    </div>
-                  </div>
-                </div>
             </div>
+            <form class="user" onsubmit="return validateForm()">
+              <div class="form-group">
+                <input type="password" class="form-control form-control-user" id="exampleInputPassword"
+                  placeholder="Enter Password - - -" />
+              </div>
+              <button type="submit" class="btn btn-primary btn-user btn-block">
+                Login
+              </button>
+
+            </form>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  </div>
+  </div>
+  </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 
-    <script type="text/javascript" src="vanilla-tilt.min.js"></script>
-<script type="text/javascript">
-	VanillaTilt.init(document.querySelector(".login1"), {
-		max: 0,
-		speed: 1000,
-    glare: true,
-	});
-	
-	//It also supports NodeList
-	VanillaTilt.init(document.querySelectorAll(".your-element"));
-</script>
-  </body>
+  <script type="text/javascript" src="vanilla-tilt.min.js"></script>
+  <script type="text/javascript">
+    VanillaTilt.init(document.querySelector(".login1"), {
+      max: 0,
+      speed: 1000,
+      glare: true,
+    });
+
+    //It also supports NodeList
+    VanillaTilt.init(document.querySelectorAll(".your-element"));
+  </script>
+</body>
+
 </html>
