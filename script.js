@@ -54,7 +54,7 @@ function clearAlerts() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  var ctx1 = document.getElementById("palmOilChart").getContext("2d");
+  var ctx1 = document.getElementById("palmOilChartOctober").getContext("2d");
 
   // Data manual untuk jam
   var dailyHours = [
@@ -100,7 +100,55 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Menampilkan total jam di bawah grafik
-  var totalHoursElement = document.getElementById("totalHours");
+  var totalHoursElement = document.getElementById("totalHoursOctober");
+  totalHoursElement.textContent = `Total Hours for the Month: ${totalHours}`;
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var ctx1 = document.getElementById("palmOilChartNovember").getContext("2d");
+
+  // Data manual untuk jam
+  var dailyHours = [0];
+
+  // Hitung total jam
+  var totalHours = dailyHours.reduce((acc, val) => acc + val, 0);
+
+  var palmOilChart = new Chart(ctx1, {
+    type: "bar", // Jenis grafik (bar, line, pie, dll.)
+    data: {
+      labels: Array.from({ length: 30 }, (_, i) => i + 1), // Label sumbu X dari 1 hingga 30
+      datasets: [
+        {
+          label: "Income", // Label dataset
+          data: dailyHours, // Data manual untuk jam
+          backgroundColor: "#4e72df", // Warna latar belakang batang
+          borderColor: "#005a1f", // Warna batas batang
+          borderWidth: 0, // Lebar batas batang
+        },
+      ],
+    },
+    options: {
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: "Date", // Judul sumbu X
+          },
+        },
+        y: {
+          title: {
+            display: true,
+            text: "Hours", // Judul sumbu Y
+          },
+          beginAtZero: true, // Mulai sumbu Y dari nol
+          max: 12, // Batas maksimal sumbu Y
+        },
+      },
+    },
+  });
+
+  // Menampilkan total jam di bawah grafik
+  var totalHoursElement = document.getElementById("totalHoursNovember");
   totalHoursElement.textContent = `Total Hours for the Month: ${totalHours}`;
 });
 
