@@ -32,26 +32,11 @@ function updateAlertCounter() {
   alertCounter.innerText = `${alertCount}+`;
 }
 
-function clearAlerts() {
-  var alertsDropdown = document.getElementById("alertsDropdownMenu");
-  // Menghapus semua notifikasi kecuali "Show All Alerts"
-  while (alertsDropdown.firstChild && alertsDropdown.childElementCount > 1) {
-    alertsDropdown.removeChild(alertsDropdown.firstChild);
-  }
-  updateAlertCounter();
-}
-
 // Contoh penggunaan
 document.addEventListener("DOMContentLoaded", function () {
   // Menambahkan beberapa alert untuk contoh
   addAlert("Update Terbaru");
 });
-
-function clearAlerts() {
-  document.getElementById("alertCounter").innerText = "";
-  document.getElementById("alertsDropdownMenu").innerHTML =
-    '<div class="dropdown-item text-center small text-gray-500">No new alerts</div>';
-}
 
 document.addEventListener("DOMContentLoaded", function () {
   var ctx1 = document.getElementById("palmOilChartOctober").getContext("2d");
@@ -108,7 +93,9 @@ document.addEventListener("DOMContentLoaded", function () {
   var ctx1 = document.getElementById("palmOilChartNovember").getContext("2d");
 
   // Data manual untuk jam
-  var dailyHours = [0];
+  var dailyHours = [
+    0, 0, 8, 8, 8, 8, 8, 2, 8, 8, 9, 9, 10, 2, 10, 3, 9, 9, 4, 8, 9, 8,
+  ];
 
   // Hitung total jam
   var totalHours = dailyHours.reduce((acc, val) => acc + val, 0);
