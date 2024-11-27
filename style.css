@@ -1483,7 +1483,179 @@ ul li {
 }
 
 .login1 {
-  background-color: #4e73df;
+  margin: 50px auto;
+  border-radius: 10px;
+  height: 600px;
+  width: 300px;
+  position: relative;
+  align-content: center;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+.login1::before {
+  content: "Since : 2023";
+  position: absolute;
+  color: #fff;
+  font-size: 0.7em;
+  font-weight: bold;
+  font-style: italic;
+  left: -100px;
+  top: 500px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.login1:hover::before {
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0.9;
+}
+
+.login1::after {
+  content: "Full Stack Develover";
+  position: absolute;
+  color: #fff;
+  font-size: 0.7em;
+  font-weight: bold;
+  font-style: italic;
+  left: 800px;
+  top: 450px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.login1:hover::after {
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0.9;
+}
+
+.login1-name {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5em;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translate3d(0, 0, 50px);
+}
+
+.login1:hover .login1-name {
+  top: 30px;
+  opacity: 1;
+}
+
+.login1-detail-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-size: 0.7em;
+  transform: translate3d(-50%, 0, 90px);
+  opacity: 0;
+  transition: 0.5s;
+  color: #4e73df;
+}
+
+.login1:hover .login1-detail-button {
+  opacity: 1;
+  bottom: 20px;
+}
+
+.login1-img {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  border-radius: 50%;
+  max-width: 120px;
+  transform: translate3d(-50%, -40%, 90px);
+  transition: 0.5s;
+}
+
+.login1:hover .login1-img {
+  transform: translate3d(-50%, -40%) scale(1.2);
+}
+
+/* body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4e72df;
+  overflow: hidden;
+} */
+.bgcontainer {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  font-size: 10px;
+  width: 40em;
+  height: 70em;
+  position: relative;
+}
+.sun {
+  position: absolute;
+  top: 15em;
+  left: 15em;
+  width: 10em;
+  height: 10em;
+}
+.earth,
+.moon {
+  position: absolute;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+  border-width: 0.1em 0.1em 0 0;
+  border-radius: 50%;
+}
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.earth {
+  top: 5em;
+  left: 5em;
+  width: 30em;
+  height: 30em;
+  animation: orbit 36.5s linear infinite;
+}
+.moon {
+  top: 0;
+  right: 0;
+  width: 8em;
+  height: 8em;
+  animation: orbit 2.7s linear infinite;
+}
+.earth::before,
+.moon::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+.earth::before {
+  top: 2.8em;
+  right: 2.8em;
+  width: 3em;
+  height: 3em;
+  background-color: aqua;
+}
+.moon::before {
+  top: 0.8em;
+  right: 0.2em;
+  width: 1.2em;
+  height: 1.2em;
+  background-color: silver;
+}
+
+.login1 {
   margin: 50px auto;
   border-radius: 10px;
   height: 600px;

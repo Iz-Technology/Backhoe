@@ -11,6 +11,7 @@
   <title>Login</title>
 
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="sb-admin-2.min.css">
 
   <link rel="stylesheet" href="script.js" />
 
@@ -51,31 +52,42 @@
 
 </head>
 
+
 <body class="bg-gradient-primary">
+
+
   <div class="container">
     <!-- Baris Luar -->
     <div class="row justify-content-center">
-      <div class="login1">
-        <h4 class="login1-name">Welcome To My Page </h4>
-        <img src="img/iz.png" alt="iz" class="login1-img">
-        <div class="col-lg md-3">
-          <div class="card-body p-0">
-            <!-- Baris Bersarang dalam Tubuh Kartu -->
-            <div class="row">
-              <!-- <div class="col-lg">
+      <div class="bgcontainer">
+        <div class="sun">
+          <img src="/img/iz.png" alt="iz" class="login1-img">
+        </div>
+        <div class="earth">
+          <div class="moon"></div>
+        </div>
+        <div class="login1">
+          <h4 class="login1-name">Welcome To My Page </h4>
+
+          <div class="col-lg md-3">
+            <div class="card-body p-0">
+              <!-- Baris Bersarang dalam Tubuh Kartu -->
+              <div class="row">
+                <!-- <div class="col-lg">
                     <div class="p-5">
                       <div class="text-center"> -->
-            </div>
-            <form class="user" onsubmit="return validateForm()">
-              <div class="form-group">
-                <input type="password" class="form-control form-control-user" id="exampleInputPassword"
-                  placeholder="Enter Password - - -" />
               </div>
-              <button type="submit" class="btn btn-primary btn-user btn-block">
-                Login
-              </button>
+              <form class="user" onsubmit="return validateForm()">
+                <div class="form-group">
+                  <input type="password" class="form-control form-control-user" id="exampleInputPassword"
+                    placeholder="Enter Password - - -" />
+                </div>
+                <button type="submit" class="btn btn-primary btn-user btn-block">
+                  Login
+                </button>
 
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </div>
