@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Data manual untuk jam
   var dailyHours = [
     0, 0, 8, 8, 8, 8, 8, 2, 8, 8, 9, 9, 10, 2, 10, 3, 9, 9, 4, 8, 9, 8, 8, 2, 1,
-    4, 0, 3,
+    4, 0, 3, 4,
   ];
 
   // Hitung total jam
