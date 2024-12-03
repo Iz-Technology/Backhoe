@@ -140,6 +140,54 @@ document.addEventListener("DOMContentLoaded", function () {
   totalHoursElement.textContent = `Total Hours for the Month: ${totalHours}`;
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  var ctx1 = document.getElementById("palmOilChartDecember").getContext("2d");
+
+  // Data manual untuk jam
+  var dailyHours = [4, 8, 0];
+
+  // Hitung total jam
+  var totalHours = dailyHours.reduce((acc, val) => acc + val, 0);
+
+  var palmOilChart = new Chart(ctx1, {
+    type: "bar", // Jenis grafik (bar, line, pie, dll.)
+    data: {
+      labels: Array.from({ length: 30 }, (_, i) => i + 1), // Label sumbu X dari 1 hingga 30
+      datasets: [
+        {
+          label: "Income", // Label dataset
+          data: dailyHours, // Data manual untuk jam
+          backgroundColor: "#4e72df", // Warna latar belakang batang
+          borderColor: "#005a1f", // Warna batas batang
+          borderWidth: 0, // Lebar batas batang
+        },
+      ],
+    },
+    options: {
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: "Date", // Judul sumbu X
+          },
+        },
+        y: {
+          title: {
+            display: true,
+            text: "Hours", // Judul sumbu Y
+          },
+          beginAtZero: true, // Mulai sumbu Y dari nol
+          max: 12, // Batas maksimal sumbu Y
+        },
+      },
+    },
+  });
+
+  // Menampilkan total jam di bawah grafik
+  var totalHoursElement = document.getElementById("totalHoursDecember");
+  totalHoursElement.textContent = `Total Hours for the Month: ${totalHours}`;
+});
+
 // Get the modal
 var modal = document.getElementById("imageModal");
 
