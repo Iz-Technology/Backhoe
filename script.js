@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var ctx1 = document.getElementById("palmOilChartDecember").getContext("2d");
 
   // Data manual untuk jam
-  var dailyHours = [4, 8, 0];
+  var dailyHours = [4, 8, 0, 2];
 
   // Hitung total jam
   var totalHours = dailyHours.reduce((acc, val) => acc + val, 0);
